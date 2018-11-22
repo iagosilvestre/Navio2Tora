@@ -24,7 +24,7 @@ unsigned int MPU9250::WriteReg(uint8_t WriteAddr, uint8_t WriteData)
     unsigned char tx[2] = {WriteAddr, WriteData};
     unsigned char rx[2] = {0};
 
-    SPIdev::transfer("/dev/spidev0.1", tx, rx, 2);
+    SPIdev::transfer("/dev/spidev2.0", tx, rx, 2);
 
     return rx[1];
 }
@@ -47,7 +47,7 @@ void MPU9250::ReadRegs(uint8_t ReadAddr, uint8_t *ReadBuf, unsigned int Bytes)
 
     tx[0] = ReadAddr | READ_FLAG;
 
-    SPIdev::transfer("/dev/spidev0.1", tx, rx, Bytes + 1);
+    SPIdev::transfer("/dev/spidev2.0", tx, rx, Bytes + 1);
 
     for(i=0; i<Bytes; i++)
         ReadBuf[i] = rx[i + 1];

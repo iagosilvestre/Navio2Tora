@@ -4,7 +4,7 @@ INCLUDES = -I ../../Navio
 
 all:
 	$(MAKE) -C ../../Navio all
-	$(CXX) -std=c++11 $(INCLUDES) -L$(NAVIO) AccelGyroMag.cpp -lnavio -o mpu
+	$(CXX) $(INCLUDES) Barometer.cpp -L$(NAVIO) -lnavio -o BarometerT
 
 clean:
-	rm -f mpu
+	rm -f BarometerT

@@ -4,8 +4,8 @@
 
 #include "LSM9DS1.h"
 
-#define DEVICE_ACC_GYRO     "/dev/spidev0.3"
-#define DEVICE_MAGNETOMETER "/dev/spidev0.2"
+#define DEVICE_ACC_GYRO     "/dev/spidev2.0"
+#define DEVICE_MAGNETOMETER "/dev/spidev2.0"
 
 #define READ_FLAG     0x80
 #define MULTIPLE_READ 0x40

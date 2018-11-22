@@ -71,7 +71,7 @@ public:
 
 		if (spi_fd < 0 ) {
 			printf("Error: Can not open SPI device\n");
-            
+
             return -1;
 		}
 
@@ -79,18 +79,18 @@ public:
 
 		::close(spi_fd);
 
-        // Debug information
-		/*
-		printf("Tx: ");
-		for (int i = 0; i < length; i++)
-			printf("%x ", tx[i]);
-		printf("\n");
+//         Debug information
 
-		printf("Rx: ");
-		for (int i = 0; i < length; i++)
-			printf("%x ", rx[i]);
-		printf("\n");
-		*/
+//		printf("Tx: ");
+//		for (int i = 0; i < length; i++)
+//			printf("%x ", tx[i]);
+//		printf("\n");
+//
+//		printf("Rx: ");
+//		for (int i = 0; i < length; i++)
+//			printf("%x ", rx[i]);
+//		printf("\n");
+
 
         return status;
 	}
